@@ -1,5 +1,6 @@
 import telebot
 import rasc
+import img
 
 token = rasc.token
 bot = telebot.TeleBot(token)
@@ -21,7 +22,7 @@ def comando1(message):
 @bot.message_handler(commands=['2'] )
 def comando1(message):
     chat_id = message.chat.id
-    photo  =  open ( 'capitulos.png' ,  'rb' ) 
+    photo  =  open ( 'capitulo.png' ,  'rb' ) 
     bot . send_photo ( chat_id ,  photo ) 
     bot.send_message(chat_id, " No período de 2013 a 2021, foram  884 capítulos de livros publicados.  \n \n consulte /help para obter uma lista de comandos. ")
 
@@ -31,7 +32,7 @@ def comando1(message):
     chat_id = message.chat.id
     photo  =  open ( 'anais.png' ,  'rb' ) 
     bot . send_photo ( chat_id ,  photo ) 
-    bot.send_message(chat_id, " No período de 2013 a 2021, foram 2647 anais de eventos.  \n \n consulte /help para obter uma lista de comandos.")
+    bot.send_message(chat_id, " No período de 2013 a 2021, foram 3997 anais de eventos.  \n \n consulte /help para obter uma lista de comandos.")
 
     
 @bot.message_handler(commands=['4'] )
@@ -39,7 +40,7 @@ def comando1(message):
     chat_id = message.chat.id
     photo  =  open ( 'livro_publicado.png' ,  'rb' ) 
     bot . send_photo ( chat_id ,  photo ) 
-    bot.send_message(chat_id, " No período de 2013 a 2021, foram 2647 livros publicados.  \n \n consulte /help para obter uma lista de comandos. ")
+    bot.send_message(chat_id, " No período de 2013 a 2021, foram 151 livros publicados.  \n \n consulte /help para obter uma lista de comandos. ")
 
     
 @bot.message_handler(commands=['5'] )
@@ -47,7 +48,7 @@ def comando1(message):
     chat_id = message.chat.id
     photo  =  open ( 'livro_organizado.png' ,  'rb' ) 
     bot . send_photo ( chat_id ,  photo ) 
-    bot.send_message(chat_id, " No período de 2013 a 2021, foram 2647 livros organizados ou edições.  \n \n consulte /help para obter uma lista de comandos. ")
+    bot.send_message(chat_id, " No período de 2013 a 2021, foram 93 livros organizados ou edições.  \n \n consulte /help para obter uma lista de comandos. ")
 
     
 bot.polling()
